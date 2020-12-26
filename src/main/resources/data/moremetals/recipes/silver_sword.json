@@ -1,25 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern":
-  [
+  "pattern": [
     "x",
     "x",
     "/"
   ],
   "key":
   {
-    "x":
-    {
+    "x": {
       "tag": "forge:metals/silver_ingot"
     },
-    "/":
-    {
+    "/": {
       "tag": "minecraft:stick"
     }
   },
   "result":
   {
-    "item": "moremetals:silver_sword",
-    "count": 1
-  }
+    "item": "moremetals:silver_sword"
+    }
 }

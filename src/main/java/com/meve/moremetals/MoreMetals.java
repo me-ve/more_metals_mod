@@ -1,7 +1,6 @@
 package com.meve.moremetals;
 
 import com.meve.moremetals.init.ModBlocks;
-import com.meve.moremetals.init.ModEntityType;
 import com.meve.moremetals.init.ModItems;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
@@ -27,7 +26,7 @@ public class MoreMetals {
 
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        //ModEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }

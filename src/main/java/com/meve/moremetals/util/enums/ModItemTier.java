@@ -8,8 +8,8 @@ import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
 
-    SILVER(2, 222, 7.0F,
-            3.0F, 20, () -> {
+    SILVER(2, 420, 7.0F,
+            2.0F, 20, () -> {
         return Ingredient.fromItems(ModItems.SILVER_INGOT.get());
     });
 

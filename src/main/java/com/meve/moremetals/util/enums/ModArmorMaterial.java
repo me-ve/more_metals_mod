@@ -14,9 +14,8 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-
-    SILVER(MoreMetals.MOD_ID + ":silver", 13,
-            new int[] { 2, 4, 5, 2 }, 22,
+    SILVER(MoreMetals.MOD_ID + ":silver", 22,
+            new int[] { 2, 5, 7, 2 }, 22,
             SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0,
             () -> { return Ingredient.fromItems(ModItems.SILVER_INGOT.get()); },0)
     ;

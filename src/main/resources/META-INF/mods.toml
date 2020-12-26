@@ -10,15 +10,14 @@ version="1.16.1-0.0.0" #mandatory
 
 displayName="More Metals" #mandatory
 
-displayURL="4chan.org" #optional
+displayURL="" #optional
 
 credits="To the internet" #optional
 
 authors="meve" #optional
 
 description='''
-hewi metal
-black end silver
+Mods adding some new items, mainly metals.
 '''
 
 [[dependencies.examplemod]] #optional
