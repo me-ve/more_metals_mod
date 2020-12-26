@@ -65,11 +65,28 @@ public class DaggerItem extends TieredItem implements IVanishable {
         boolean sneaking = attacker.isSneaking();
         boolean seen = target.canEntityBeSeen(attacker);
         boolean asleep = target.isSleeping();
+        boolean sneakAttack;
         if(sneaking) {
-            float bonusDamage = attackDamage;
-            String msg = TextFormatting.BLUE + "That was super effective!";
-            attacker.sendMessage(new StringTextComponent(msg), attacker.getUniqueID());
-            target.setHealth(target.getHealth()-bonusDamage);
+            sneakAttack = true;
+            attacker.sendMessage(new StringTextComponent("sneaking"), attacker.getUniqueID());
+            /*if(asleep) {
+                attacker.sendMessage(new StringTextComponent("asleep"), attacker.getUniqueID());
+                sneakAttack = true;
+            }
+            else if(!seen) {
+                attacker.sendMessage(new StringTextComponent("unseen"), attacker.getUniqueID());
+                sneakAttack = true;
+            }
+            else {
+                attacker.sendMessage(new StringTextComponent("seen"), attacker.getUniqueID());
+                sneakAttack = false;
+            }*/
+            if(sneakAttack)
+            {
+                attacker.sendMessage(new StringTextComponent("sneak_attack"), attacker.getUniqueID());
+                float bonusDamage = attackDamage;
+                target.setHealth(target.getHealth() - bonusDamage);
+            }
         }
         return true;
     }
