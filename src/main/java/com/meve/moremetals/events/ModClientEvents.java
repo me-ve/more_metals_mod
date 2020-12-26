@@ -56,25 +56,6 @@ public class ModClientEvents {
             }
         }
     }
-    @SubscribeEvent
-    public static void onAttackWithDaggerWhileSneaking(AttackEntityEvent event) {
-        Item heldItem = event.getEntityLiving().getHeldItemMainhand().getItem();
-        boolean isDagger = heldItem.getClass() == DaggerItem.class;
-        if (isDagger) {
-            if (event.getTarget().isAlive()) {
-                LivingEntity target = (LivingEntity) event.getTarget();
-                PlayerEntity player = event.getPlayer();
-                boolean sneaking = player.isSneaking();
-                //boolean unseen = !target.canEntityBeSeen(player);
-                if(sneaking) {
-                    float bonusDamage = heldItem.getMaxDamage();
-                    String msg = TextFormatting.DARK_BLUE + "That was super effective!";
-                    player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
-                    target.setHealth(target.getHealth()-bonusDamage);
-                }
-            }
-        }
-    }
 }
 
 

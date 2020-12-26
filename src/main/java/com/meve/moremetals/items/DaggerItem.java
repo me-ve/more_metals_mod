@@ -19,6 +19,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.TieredItem;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 /** This code is taken from SwordItem.java class in Minecraft source code.*/
@@ -60,6 +62,14 @@ public class DaggerItem extends TieredItem implements IVanishable {
         stack.damageItem(1, attacker, (p_220045_0_) -> {
             p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
         });
+        boolean sneaking = attacker.isSneaking();
+        boolean unseen = !target.canEntityBeSeen(attacker);
+        if(sneaking) {
+            float bonusDamage = attackDamage;
+            String msg = TextFormatting.BLUE + "That was super effective!";
+            attacker.sendMessage(new StringTextComponent(msg), attacker.getUniqueID());
+            target.setHealth(target.getHealth()-bonusDamage);
+        }
         return true;
     }
 
