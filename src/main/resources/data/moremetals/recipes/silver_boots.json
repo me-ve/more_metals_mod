@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x x",
+    "x x"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "forge:metals/silver_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "moremetals:silver_boots",
+    "count": 1
+  }
+}

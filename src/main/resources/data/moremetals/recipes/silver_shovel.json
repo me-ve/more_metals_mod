@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x",
+    "/",
+    "/"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "tag": "forge:metals/silver_ingot"
+    },
+    "/":
+    {
+      "tag": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "moremetals:silver_shovel",
+    "count": 1
+  }
+}
