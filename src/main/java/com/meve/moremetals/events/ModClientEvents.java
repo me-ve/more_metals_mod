@@ -44,7 +44,7 @@ public class ModClientEvents {
         if (isSilverWeapon) {
             if (event.getTarget().isAlive()) {
                 LivingEntity target = (LivingEntity) event.getTarget();
-                if (target.getCreatureAttribute() == CreatureAttribute.UNDEAD) {
+                if(target.isEntityUndead()) {
                     float bonusDamage = 1.25F;
                         /*if(!event.getPlayer().getEntityWorld().isRemote) {
                                 PlayerEntity player = event.getPlayer();

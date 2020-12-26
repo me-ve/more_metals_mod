@@ -63,7 +63,8 @@ public class DaggerItem extends TieredItem implements IVanishable {
             p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
         });
         boolean sneaking = attacker.isSneaking();
-        boolean unseen = !target.canEntityBeSeen(attacker);
+        boolean seen = target.canEntityBeSeen(attacker);
+        boolean asleep = target.isSleeping();
         if(sneaking) {
             float bonusDamage = attackDamage;
             String msg = TextFormatting.BLUE + "That was super effective!";
