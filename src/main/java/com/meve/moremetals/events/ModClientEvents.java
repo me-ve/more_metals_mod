@@ -38,8 +38,8 @@ public class ModClientEvents {
         boolean isSilverWeapon =
                 (
                         heldItem == ModItems.SILVER_AXE.get() ||
-                                heldItem == ModItems.SILVER_DAGGER.get() ||
-                                heldItem == ModItems.SILVER_SWORD.get()
+                        heldItem == ModItems.SILVER_DAGGER.get() ||
+                        heldItem == ModItems.SILVER_SWORD.get()
                 );
         if (isSilverWeapon) {
             if (event.getTarget().isAlive()) {

@@ -20,7 +20,6 @@ import net.minecraft.item.TieredItem;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 /** This code is taken from SwordItem.java class in Minecraft source code.*/
@@ -59,33 +58,15 @@ public class DaggerItem extends TieredItem implements IVanishable {
      * the damage on the stack.
      */
     public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        LivingEntity lastAttackedEntity = target.getLastAttackedEntity();
         stack.damageItem(1, attacker, (p_220045_0_) -> {
             p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
         });
-        boolean sneaking = attacker.isSneaking();
-        boolean seen = target.canEntityBeSeen(attacker);
-        boolean asleep = target.isSleeping();
-        boolean sneakAttack;
-        if(sneaking) {
-            sneakAttack = true;
-            attacker.sendMessage(new StringTextComponent("sneaking"), attacker.getUniqueID());
-            /*if(asleep) {
-                attacker.sendMessage(new StringTextComponent("asleep"), attacker.getUniqueID());
-                sneakAttack = true;
-            }
-            else if(!seen) {
-                attacker.sendMessage(new StringTextComponent("unseen"), attacker.getUniqueID());
-                sneakAttack = true;
-            }
-            else {
-                attacker.sendMessage(new StringTextComponent("seen"), attacker.getUniqueID());
-                sneakAttack = false;
-            }*/
-            if(sneakAttack)
-            {
-                attacker.sendMessage(new StringTextComponent("sneak_attack"), attacker.getUniqueID());
-                float bonusDamage = attackDamage;
+        if(attacker.isSneaking()) {
+            if (attacker.isInvisible() || !(attacker.equals(lastAttackedEntity)) || target.isSleeping()) {
+                float bonusDamage = attackDamage * 1.5F;
                 target.setHealth(target.getHealth() - bonusDamage);
+                target.setLastAttackedEntity(attacker);
             }
         }
         return true;
