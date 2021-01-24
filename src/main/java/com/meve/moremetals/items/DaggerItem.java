@@ -54,8 +54,8 @@ public class DaggerItem extends TieredItem implements IVanishable {
     }
 
     /**
-     * Current implementations of this method in child classes do not use the entry argument beside ev. They just raise
-     * the damage on the stack.
+     * Current implementations of this method in child classes sets more of damage if the attacker is performing the sneak attack.
+     * It is performed if the attacker is under the invisibility effect, the target is sleeping or the attacker didn't attack this target previously.
      */
     public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         LivingEntity lastAttackedEntity = target.getLastAttackedEntity();

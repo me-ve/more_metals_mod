@@ -2,6 +2,10 @@
 	"itemGroup.moreMetalsTab": "MoreMetals",
 	"block.moremetals.silver_block": "Silver Block",
 	"block.moremetals.silver_ore": "Silver Ore",
+	"item.moremetals.diamond_dagger": "Diamond Dagger",
+	"item.moremetals.gold_dagger": "Golden Dagger",
+	"item.moremetals.iron_dagger": "Iron Dagger",
+	"item.moremetals.netherite_dagger": "Netherite Dagger",
 	"item.moremetals.silver_axe": "Silver Axe",
 	"item.moremetals.silver_block": "Silver Block",
 	"item.moremetals.silver_boots": "Silver Boots",
@@ -14,5 +18,7 @@
 	"item.moremetals.silver_ore": "Silver Ore",
 	"item.moremetals.silver_pickaxe": "Silver Pickaxe",
 	"item.moremetals.silver_shovel": "Silver Shovel",
-	"item.moremetals.silver_sword": "Silver Sword"
+	"item.moremetals.silver_sword": "Silver Sword",
+	"item.moremetals.stone_dagger": "Stone Dagger",
+	"item.moremetals.wooden_dagger": "Wooden Dagger"
 }

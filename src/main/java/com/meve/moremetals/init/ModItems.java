@@ -35,43 +35,43 @@ public class ModItems {
     public static final RegistryObject<DaggerItem> NETHERITE_DAGGER =
             ITEMS.register("netherite_dagger",
                     () -> new DaggerItem(ItemTier.NETHERITE,
-                            1.5F,-1.9F,
+                            1.0F,-1.9F,
                             new Item.Properties().group(MoreMetals.TAB)));
 
     public static final RegistryObject<DaggerItem> DIAMOND_DAGGER =
             ITEMS.register("diamond_dagger",
                     () -> new DaggerItem(ItemTier.DIAMOND,
-                            1.5F,-1.9F,
+                            1.0F,-1.9F,
                             new Item.Properties().group(MoreMetals.TAB)));
 
     public static final RegistryObject<DaggerItem> GOLD_DAGGER =
             ITEMS.register("gold_dagger",
                     () -> new DaggerItem(ItemTier.GOLD,
-                            1.5F,-1.9F,
+                            1.0F,-1.9F,
                             new Item.Properties().group(MoreMetals.TAB)));
 
     public static final RegistryObject<DaggerItem> SILVER_DAGGER =
             ITEMS.register("silver_dagger",
                     () -> new DaggerItem(ModItemTier.SILVER,
-                            1.5F,-1.9F,
+                            1.0F,-1.9F,
                             new Item.Properties().group(MoreMetals.TAB)));
 
     public static final RegistryObject<DaggerItem> IRON_DAGGER =
             ITEMS.register("iron_dagger",
                     () -> new DaggerItem(ItemTier.IRON,
-                            1.5F,-1.9F,
+                            1.0F,-1.9F,
                             new Item.Properties().group(MoreMetals.TAB)));
 
     public static final RegistryObject<DaggerItem> STONE_DAGGER =
             ITEMS.register("stone_dagger",
                     () -> new DaggerItem(ItemTier.STONE,
-                            1.5F,-1.9F,
+                            1.0F,-1.9F,
                             new Item.Properties().group(MoreMetals.TAB)));
 
     public static final RegistryObject<DaggerItem> WOODEN_DAGGER =
             ITEMS.register("wooden_dagger",
                     () -> new DaggerItem(ItemTier.WOOD,
-                            1.5F,-1.9F,
+                            1.0F,-1.9F,
                             new Item.Properties().group(MoreMetals.TAB)));
 
     public static final RegistryObject<SwordItem> SILVER_SWORD =
