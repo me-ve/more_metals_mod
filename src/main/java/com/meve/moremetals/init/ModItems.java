@@ -44,8 +44,8 @@ public class ModItems {
                             1.0F,-1.9F,
                             new Item.Properties().group(MoreMetals.TAB)));
 
-    public static final RegistryObject<DaggerItem> GOLD_DAGGER =
-            ITEMS.register("gold_dagger",
+    public static final RegistryObject<DaggerItem> GOLDEN_DAGGER =
+            ITEMS.register("golden_dagger",
                     () -> new DaggerItem(ItemTier.GOLD,
                             1.0F,-1.9F,
                             new Item.Properties().group(MoreMetals.TAB)));
