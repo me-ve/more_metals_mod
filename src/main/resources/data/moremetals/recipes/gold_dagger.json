@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x",
+    "/"
+  ],
+  "key":
+  {
+    "x": {
+      "tag": "minecraft:gold_ingot"
+    },
+    "/": {
+      "tag": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "moremetals:gold_dagger"
+    }
+}
