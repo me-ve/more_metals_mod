@@ -44,7 +44,7 @@ public class MoreMetals {
         @Override
 
         public ItemStack createIcon() {
-            return new ItemStack(ModItems.SILVER_INGOT.get());
+            return new ItemStack(ModItems.SILVER_DAGGER.get());
         }
 
 

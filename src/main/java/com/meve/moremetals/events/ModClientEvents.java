@@ -12,6 +12,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolItem;
@@ -56,6 +57,8 @@ public class ModClientEvents {
             }
         }
     }
+    @SubscribeEvent
+    public static void onAttackWithSpecifiedArmor(AttackEntityEvent event) {
+        //TODO adding crits when wearing leather armor
+    }
 }
-
-
