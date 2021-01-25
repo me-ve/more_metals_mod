@@ -1,4 +1,4 @@
-package﻿ com.meve.moremetals.init;
+package com.meve.moremetals.init;
 
 import com.meve.moremetals.MoreMetals;
 import com.meve.moremetals.blocks.SilverBlock;
