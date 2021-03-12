@@ -12,6 +12,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -35,7 +36,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ModClientEvents {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onAttackMonsterWithSilver(AttackEntityEvent event) {
-        Item heldItem = event.getEntityLiving().getHeldItemMainhand().getItem();
+        Item heldItem = event.getEntityLiving().getItemBySlot(EquipmentSlotType.MAINHAND).getItem();
         boolean isSilverWeapon =
                 (
                         heldItem == ModItems.SILVER_AXE.get() ||
@@ -45,7 +46,7 @@ public class ModClientEvents {
         if (isSilverWeapon) {
             if (event.getTarget().isAlive()) {
                 LivingEntity target = (LivingEntity) event.getTarget();
-                if(target.isEntityUndead()) {
+                if(target.getMobType() == CreatureAttribute.UNDEAD) {
                     float bonusDamage = 1.25F;
                         /*if(!event.getPlayer().getEntityWorld().isRemote) {
                                 PlayerEntity player = event.getPlayer();
