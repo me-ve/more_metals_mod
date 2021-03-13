@@ -2,6 +2,7 @@ package com.meve.moremetals;
 
 import com.meve.moremetals.init.ModBlocks;
 import com.meve.moremetals.init.ModItems;
+import com.meve.moremetals.world.gen.ModOreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +31,7 @@ public class MoreMetals {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        ModOreGen.registerOre();
         DeferredWorkQueue.runLater(() -> {
         });
     }
